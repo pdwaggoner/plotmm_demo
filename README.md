@@ -30,21 +30,21 @@ Similar to `plot_mm()`, users simply pass a model object to the function's first
 
 Though more custom color options are possible through layering additional functions as previously discussed, there is a built in set of color palettes allowing the user to locally change colors. This third argument, `color`, includes three options: an interpolated scale from blue to red via the `amerika` package, the "Rushmore1" palette via the `wesanderson` package, and a grayscale default option. All of these color options, as well as a demonstration of the ease of adding custom labels and changing default settings are included in the following figure using the Old Faithful data.
 
-![Visual Output via `plot_cut_point()`](cutpoints)
+![Visual Output via `plot_cut_point()`](cutpoints.png)
 
 ### `plot_mix_comps()`
 
 Finally, the package includes a powerful helper function, `plot_mix_comps()`, to allow for further customization of visual mixture model output. This function is also used in the core `plot_mm()` function. The `plot_mix_comps()` function works by computing and then constraining the parameters that are overlaid. This function is powerful because it is flexible to accommodate *any* mixture model object, not just those from the `mixtools`, `EMCluster}`, or `flexmix` packages. The result is custom, publication-ready plot, though more code is needed for a custom plot than required of the main `plot_mm()` function. For example, most common use of this function in custom applications would be passing it to the `fun` argument within the `stat_function()` function in a `ggplot` function call. The result of this type of application is shown below:
 
-![Custom Plot with `plot_mix_comps()`](outcomps)
+![Custom Plot with `plot_mix_comps()`](outcomps.png)
 
 ### Comparison to Other Packages
 
 The value of the package can also be seen in direct comparison with plotting options from existing packages. For example, the first figure following is using the `plotem()` function from the `EMCluster` package, and the next figure is using our tidy `plot_mm()` approach for a more elegant rendering of the same configuration.
 
-![Plot with EMCluster](e1)
+![Plot with EMCluster](e1.png)
 
-![Plot with Our plotmm Tidy Approach](p1)
+![Plot with Our plotmm Tidy Approach](p1.png)
 
 As a final comparison, we compare our approach to the `mixtools` plotting options. The default plotting option for a univariate Gaussian mixture model fit via `mixtools` is to plot the log-likelihood over each iteration of the model (given that the EM algorithm is iterative). While valuable information, this base plotting option is not intuitive, nor is it substantively useful in visually presenting results from the fit mixture model. Further, the plot is in base R, which is less visually appealing. See this plot for the clustering configuration for the Fisher Iris data set below: 
 
