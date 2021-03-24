@@ -17,6 +17,8 @@ For example, see a simple case with a univariate Gaussian mixture model in Figur
 	\label{figure:one} 
 \end{figure}
 
+![Univariate Gaussian Mixture Model (GMM)](one.png)
+
 
 Now, consider a bivariate Gaussian case from both \texttt{mixtools} and \texttt{EMCluster} in Figures \ref{figure:four} and \ref{figure:three} respectively. Each are for different sample datasets. Note that the bivariate cases incorporate two features, which the package treats jointly as well as independently. All three figures are rendered in a single plot. There are additional options and functions to layer to change the ordering, labels, colors, spacing, and so on if so desired. 
 
